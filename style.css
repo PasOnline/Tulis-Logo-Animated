@@ -1,0 +1,55 @@
+body{
+    background: #063852;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    position: absolute;
+    top:20%;
+    left:70%;
+    width: 400px;
+    height: 400px;
+    background: url(Tulips.jpg);
+    background-size: 100%;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(-50%,-50%);
+    box-shadow: -80px 80px 80px rgba(0, 0, 0, 1.5); 
+
+}
+
+
+.logo,
+.logo:before,
+.logo:after{
+animation: logoAnimated 3s 1;
+}
+
+.logo:before{
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: -25px;
+    width: 25px;
+    height: 100%;
+    background: url(Tulips.jpg);
+
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+.logo:after{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 46px;
+    width: 70.77%;
+    height: 36px;
+    background: url(Tulips.jpg);
+    transform: rotate(45deg) skewY(-45deg);
+}
+
+@keyframes logoAnimated{
+    0%{
+        transform: rotate(90deg);
+    }
+    
+}
